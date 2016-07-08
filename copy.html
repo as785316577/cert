@@ -20,35 +20,9 @@
 <img src="https://as785316577.github.io/cert/search_pdf.jpg" class='pw-pdf' alt="Download PDF" title="Download PDF" onClick="window.location.href='http://www.chsi.com.cn/report/xueli/download.do?vcode=209193051500&amp;rid=58618823595842254301777947668460&amp;ln=cn'"/>
 
 
-
-<script type="text/javascript" src='http://t4.chei.com.cn/common/jquery/2.1.1/jquery.min.js'></script>  
-
-			
-			
-				报告语种：
-				<a href="#" class="current">中文</a><a href="#" id="openerHref">英文</a>
-		        <div id="noenreport" title="申请英文版" style="display:none;"><img src="http://www.chsi.com.cn/images/wap/icon_top.png"/>该备案表尚无对应的英文版，<span onClick="window.location.href='http://www.chsi.com.cn//xlcx/rhsq.jsp#rhsqxl_en'" class='nr-detail'>如何申请</span></div>
-				<script type="text/javascript">
-				$(function() {
-					$("#openerHref").click(function(){
-						$("#noenreport").show();
-                        $('.pw-chooseLan').find('a').removeClass('current').end().end().find('#openerHref').addClass('current');
-						return false;
-					});
-                    $(window.document||window.document.body).click(function(){
-                        var $dialog = $('#noenreport:not(:hidden)');
-                        if($dialog.length!=0){
-                            $dialog.hide().prev('#openerHref').removeClass('current');
-                            $('.pw-chooseLan a:eq(0)').addClass('current');
-                        }    
-                    });
-				});
-				</script>		        
-			
-		
-	
-
-
+报告语种：
+<a href="#" class="current">中文</a><a href="#" id="openerHref">英文</a>
+<div id="noenreport" title="申请英文版" style="display:none;"><img src="http://www.chsi.com.cn/images/wap/icon_top.png"/>该备案表尚无对应的英文版，<span onClick="window.location.href='http://www.chsi.com.cn//xlcx/rhsq.jsp#rhsqxl_en'" class='nr-detail'>如何申请</span></div>
         </div>
       <div class="pw-info-t">教育部学历证书电子注册备案表</div>
       <div class="pw-info-img"><img height="100" class="cn_photo1_img" id="xueliPhoto" src="https://as785316577.github.io/cert/avator.jpg" /></div>
@@ -125,13 +99,28 @@
           </tr>
         </table>
     </div>
-
-	
-	
-		<a href="http://www.chsi.com.cn/xlcx/search.jsp">返回</a>
+    <a href="http://www.chsi.com.cn/xlcx/search.jsp">返回</a>
 	
 
   </div>
 </div>
+
+<script type="text/javascript" src='http://t4.chei.com.cn/common/jquery/2.1.1/jquery.min.js'></script>
+<script type="text/javascript">
+$(function() {
+	$("#openerHref").click(function(){
+		$("#noenreport").show();
+                $('.pw-chooseLan').find('a').removeClass('current').end().end().find('#openerHref').addClass('current');
+		return false;
+	});
+        $(window.document||window.document.body).click(function(){
+                var $dialog = $('#noenreport:not(:hidden)');
+                if($dialog.length!=0){
+        	        $dialog.hide().prev('#openerHref').removeClass('current');
+                        $('.pw-chooseLan a:eq(0)').addClass('current');
+                }    
+        });
+});
+</script>
 </body>
 </html>
